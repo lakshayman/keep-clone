@@ -1,6 +1,6 @@
 # NOTE KEEPER
 
-This is a quick and easy note-taking application to write and store whats on your mind immediately. In this application, you can create, edit, and delete notes on the go and can assign different colors to different notes to organize them and have quick identification of required memos.
+This is a quick and easy note-taking application to write and store what's on your mind immediately. In this application, you can create, edit, and delete notes on the go and can assign different colors to different notes to organize them and have quick identification of required memos.
 
 ## DEMO
 
