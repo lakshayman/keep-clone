@@ -6,7 +6,7 @@ This is a quick and easy note-taking application to write and store what's on yo
 
 In this section, I will walk you through a short demo guiding you across the different features of the app and how to use them.
 
-1. Open the note-taking application via the deployed link: [https://keep-clone-blond.vercel.app/](https://my-keep-clone.vercel.app/)
+1. Open the note-taking application via the deployed link: https://my-keep-clone-with-search.vercel.app/
 
 2. You will see the following screen.
    ![image](https://github.com/lakshayman/keep-clone/assets/45519620/0b861a27-20ad-4301-8613-63895a604b21)
