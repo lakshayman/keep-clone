@@ -36,14 +36,18 @@ export default function Notes({
   };
 
   const handleSave = () => {
-    const modifiedNotes = notes.map((note) => {
-      if (note.id === editId) {
-        return { ...note, title: editTitle, content: editContent };
-      }
-      return note;
-    });
-    setNotes(modifiedNotes);
-    handleClose();
+    if(editTitle && editContent) {
+        const modifiedNotes = notes.map((note) => {
+            if (note.id === editId) {
+              return { ...note, title: editTitle, content: editContent };
+            }
+            return note;
+          });
+          setNotes(modifiedNotes);
+          handleClose();
+    } else {
+        window.alert("You cannot save a note without title and content.")
+    }
   };
 
   const handleDelete = (e, id) => {

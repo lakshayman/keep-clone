@@ -25,7 +25,7 @@ export default function Create({ notes, setNotes, openCreateDialog, setOpenCreat
         setNotesCount(prev=>prev+1)
         handleClose();
     } else {
-
+        window.alert("You cannot save a note without title and content.")
     }
   };
 
