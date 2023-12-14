@@ -48,10 +48,7 @@ export default function Form({
           className="CustomDialogContent"
           label="Content"
           value={content}
-          onChange={(e) => {
-            setContent(e.target.value);
-            console.log(content);
-          }}
+          onChange={(e) => setContent(e.target.value)}
           multiline
           maxRows={6}
           variant="standard"

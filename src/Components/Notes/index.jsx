@@ -9,15 +9,13 @@ export default function Notes({
   openEditDialog,
   setOpenCreateDialog,
   setOpenEditDialog,
+  optionsVisibleArray,
+  setOptionsVisibleArray
 }) {
   const [editColor, setEditColor] = useState("#ffffff");
   const [editId, setEditId] = useState(undefined);
   const [editTitle, setEditTitle] = useState("");
   const [editContent, setEditContent] = useState("");
-
-  const [optionsVisibleArray, setOptionsVisibleArray] = useState(
-    Array(notes.length).fill(0)
-  );
 
   const handleClose = () => {
     setEditId(undefined);
