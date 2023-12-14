@@ -1,0 +1,80 @@
+.note {
+    position: relative;
+    width: 250px;
+    max-width: 100%;
+    margin: 20px;
+    border: black solid 1px;
+    border-radius: 12px;
+    padding: 10px;
+    padding-bottom: 50px;
+    cursor: pointer;
+}
+
+.note-content {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+}
+
+.note:hover {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 25px 50px;
+}
+
+.note-title {
+    font-weight: 600;
+    margin-bottom: 10px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.note-options {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    height: 30px;
+}
+
+.icon {
+    height: 20px;
+    width: 20px;
+    margin: 0 2px;
+    padding: 8px;
+    border-radius: 25px;
+}
+
+.icon:hover {
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.background-options {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 250px;
+    bottom: -60px;
+    border: black solid 1px;
+    border-radius: 12px;
+    background-color: white;
+    z-index: 99;
+}
+
+.circle {
+    border-radius: 25px;
+    border: black solid 1px;
+    height: 25px;
+    width: 25px;
+    margin: 4px;
+}

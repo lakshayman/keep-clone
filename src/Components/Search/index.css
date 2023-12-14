@@ -1,0 +1,31 @@
+.searchbar {
+    height: 40px;
+    width: 50%;
+    padding-left: 50px;
+    padding-right: 10px;
+    border-radius: 12px;
+    border: 1px solid #414141;
+    background: #FFF;
+}
+
+.searchbar:hover {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.searchbar:focus {
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.searchbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.searchbar-icon {
+    position: absolute;
+    left: 24%;
+    height: 25px;
+    width: 25px;
+}
