@@ -4,11 +4,12 @@ import AddIcon from "@mui/icons-material/Add";
 import "./index.css";
 import Form from "../Form";
 
-export default function Create({ notes, setNotes, openCreateDialog, setOpenCreateDialog, setOpenEditDialog, notesCount, setNotesCount }) {
+export default function Create({ setNotes, openCreateDialog, setOpenCreateDialog, setOpenEditDialog, notesCount, setNotesCount, resetSearch }) {
   const [title, setTitle] = React.useState("");
   const [content, setContent] = React.useState("");
 
   const handleClickOpen = () => {
+    resetSearch();
     setOpenCreateDialog(true);
     setOpenEditDialog(false);
   };
@@ -21,7 +22,7 @@ export default function Create({ notes, setNotes, openCreateDialog, setOpenCreat
 
   const handleSave = () => {
     if (title && content) {
-        setNotes([{ id: notesCount, title, content, color: "#ffffff" }, ...notes]);
+        setNotes(prev=>([{ id: notesCount, title, content, color: "#ffffff" }, ...prev]));
         setNotesCount(prev=>prev+1)
         handleClose();
     } else {

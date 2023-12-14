@@ -10,7 +10,9 @@ export default function Notes({
   setOpenCreateDialog,
   setOpenEditDialog,
   optionsVisibleArray,
-  setOptionsVisibleArray
+  setOptionsVisibleArray,
+  searchValue,
+  resetSearch
 }) {
   const [editColor, setEditColor] = useState("#ffffff");
   const [editId, setEditId] = useState(undefined);
@@ -50,9 +52,13 @@ export default function Notes({
 
   const handleDelete = (e, id) => {
     e.stopPropagation();
-    if (window.confirm("Are you sure you want to delete the note")) {
-      const modifiedNotes = notes.filter((note) => note.id !== id);
-      setNotes(modifiedNotes);
+    if(searchValue !== ""){
+        alert("You can not delete while searching...");
+    } else {
+        if (window.confirm("Are you sure you want to delete the note")) {
+            const modifiedNotes = notes.filter((note) => note.id !== id);
+            setNotes(modifiedNotes);
+        }
     }
   };
 
@@ -96,6 +102,7 @@ export default function Notes({
               optionsVisibleArray={optionsVisibleArray}
               setOptionsVisibleArray={setOptionsVisibleArray}
               handleColorChange={handleColorChange}
+              resetSearch={resetSearch}
             />
           );
         })}
