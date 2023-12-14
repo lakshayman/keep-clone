@@ -22,8 +22,9 @@ function App() {
   }, [notesCount]);
 
   useEffect(()=>{
-    localStorage.setItem("notes", JSON.stringify(notes))
-  }, [notes])
+    setOptionsVisibleArray(Array(notes.length).fill(0));
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
 
   return (
     <div className="App">
